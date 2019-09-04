@@ -5,12 +5,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public abstract class ServerCommand extends NonPlayerCommand {
+/** This is the base command class used for creating console only commands.
+ * @version 1.0
+ * @since 1.0
+ */
+public abstract class ConsoleCommand extends NonPlayerCommand {
   
   /**
    * @param plugin The plugin that is using BukkitUtils
    */
-  public ServerCommand(JavaPlugin plugin) {
+  public ConsoleCommand(JavaPlugin plugin) {
     super(plugin);
   }
   

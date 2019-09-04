@@ -8,6 +8,10 @@ import org.bukkit.plugin.Plugin;
 import java.io.File;
 import java.util.HashMap;
 
+/** Utilities for configuration files
+ * @version 1.0
+ * @since 1.0
+ */
 public class ConfigUtils {
   
   /** Configuration files

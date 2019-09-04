@@ -5,6 +5,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/** This is the base command class used for creating command block only commands.
+ * @version 1.0
+ * @since 1.0
+ */
 public abstract class CommandBlockCommand extends NonPlayerCommand {
   
   /**

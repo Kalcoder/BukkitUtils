@@ -1,5 +1,9 @@
 package me.sh0ck.BukkitUtils.errors;
 
+/** Error for a missing configuration file
+ * @version 1.0
+ * @since 1.0
+ */
 public class MissingConfigurationError extends Error{
   
   public MissingConfigurationError() {

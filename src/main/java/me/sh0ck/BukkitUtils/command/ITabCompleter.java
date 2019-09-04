@@ -6,6 +6,10 @@ import org.bukkit.command.TabCompleter;
 
 import java.util.List;
 
+/** Gives command tab completion
+ * @version 1.0
+ * @since 1.0
+ */
 public interface ITabCompleter extends TabCompleter {
   
   /** Executes when a request for tab completion is sent
