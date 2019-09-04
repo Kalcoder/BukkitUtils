@@ -1,2 +1,4 @@
 rootProject.name = 'BukkitUtils'
 
+group = 'me.Kalcoder'
+version = '1.0'

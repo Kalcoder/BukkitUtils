@@ -1,20 +1,20 @@
-package me.sh0ck.BukkitUtils.command;
+package com.Kalcoder.BukkitUtils.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
-/** This is the base command class used for creating client only commands.
+/** This is the base command class used for creating console only commands.
  * @version 1.0
  * @since 1.0
  */
-public abstract class ClientCommand extends BaseCommand {
+public abstract class ConsoleCommand extends NonPlayerCommand {
   
   /**
    * @param plugin The plugin that is using BukkitUtils
    */
-  public ClientCommand(JavaPlugin plugin) {
+  public ConsoleCommand(JavaPlugin plugin) {
     super(plugin);
   }
   
@@ -28,11 +28,10 @@ public abstract class ClientCommand extends BaseCommand {
    */
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-    if (!(sender instanceof Player)) {
-      sender.sendMessage("Error: You must be a player to use this command!");
+    if (!(sender instanceof ConsoleCommandSender)) {
+      sender.sendMessage("Error: You can only execute this command through the console!");
       return true;
     }
-    super.onCommand(sender, command, label, args);
-    return true;
+    return super.onCommand(sender, command, label, args);
   }
 }

@@ -1,6 +1,6 @@
-package me.sh0ck.BukkitUtils.config;
+package com.Kalcoder.BukkitUtils.config;
 
-import me.sh0ck.BukkitUtils.errors.MissingConfigurationError;
+import com.Kalcoder.BukkitUtils.errors.MissingConfigurationError;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.Plugin;

@@ -1,4 +1,4 @@
-package me.sh0ck.BukkitUtils.errors;
+package com.Kalcoder.BukkitUtils.errors;
 
 /** Error for a missing configuration file
  * @version 1.0

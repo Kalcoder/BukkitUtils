@@ -1,4 +1,4 @@
-package me.sh0ck.BukkitUtils.command;
+package com.Kalcoder.BukkitUtils.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
