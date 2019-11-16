@@ -12,6 +12,11 @@ group = 'com.github.Kalcoder'
 archivesBaseName = "BukkitUtils"
 version = '1.0'
 
+javadoc {
+    source = sourceSets.main.allJava
+    classpath = configurations.compile
+}
+
 publishing {
     repositories {
         maven {
