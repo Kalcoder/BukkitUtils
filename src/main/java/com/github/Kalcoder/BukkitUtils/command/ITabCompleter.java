@@ -7,7 +7,7 @@ import org.bukkit.command.TabCompleter;
 import java.util.List;
 
 /** Gives command tab completion
- * @version 1.0
+ *
  * @since 1.0
  */
 public interface ITabCompleter extends TabCompleter {
@@ -18,6 +18,8 @@ public interface ITabCompleter extends TabCompleter {
    * @param label The alias of the command that is used during the request
    * @param args The arguments of the command that is used during the request
    * @return A list of strings that the executor can choose from when tab completing
+   *
+   * @since 1.0
    */
   List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args);
 }

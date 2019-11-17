@@ -1,7 +1,7 @@
 package com.github.Kalcoder.BukkitUtils.errors;
 
 /** Error for a missing configuration file
- * @version 1.0
+ *
  * @since 1.0
  */
 public class ConfigurationNotFoundException extends Error{
@@ -12,6 +12,8 @@ public class ConfigurationNotFoundException extends Error{
   
   /**
    * @param configName The name of the missing configuration
+   *
+   * @since 1.0
    */
   public ConfigurationNotFoundException(String configName) {
     super("The configuration \"" + configName + "\" was not found!");
@@ -20,6 +22,8 @@ public class ConfigurationNotFoundException extends Error{
   /**
    * @param configName The name of the missing configuration
    * @param cause The cause of the error
+   *
+   * @since 1.0
    */
   public ConfigurationNotFoundException(String configName, Throwable cause) {
     super("The configuration \"" + configName + "\" was not found!", cause);
@@ -27,6 +31,8 @@ public class ConfigurationNotFoundException extends Error{
   
   /**
    * @param cause The cause of the error
+   *
+   * @since 1.0
    */
   public ConfigurationNotFoundException(Throwable cause) {
     super(cause);
