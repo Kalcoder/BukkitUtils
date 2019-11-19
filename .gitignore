@@ -4,3 +4,6 @@
 /gradle/
 /.idea/
 gradle.properties
+.vscode
+.theia
+bin

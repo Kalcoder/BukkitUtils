@@ -4,7 +4,7 @@ package com.github.Kalcoder.BukkitUtils.errors;
  *
  * @since 1.0
  */
-public class ConfigurationNotFoundException extends Error{
+public class ConfigurationNotFoundException extends Exception{
   
   public ConfigurationNotFoundException() {
     super();
