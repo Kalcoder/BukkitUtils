@@ -19,8 +19,9 @@ public abstract class BaseCommand implements CommandExecutor {
    * @param plugin The plugin that is using BukkitUtils
    * @since 1.0
    */
-  public BaseCommand(JavaPlugin plugin) {
+  public BaseCommand(JavaPlugin plugin, String name) {
     this.plugin = plugin;
+    plugin.getCommand(name).setExecutor(this);
   }
   
   /** Function called when the command registered under this command's name is executed
