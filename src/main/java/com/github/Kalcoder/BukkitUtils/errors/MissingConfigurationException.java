@@ -4,7 +4,11 @@ package com.github.Kalcoder.BukkitUtils.errors;
  *
  * @since 1.0
  */
-public class MissingConfigurationException extends Exception{
+<<<<<<< Updated upstream:src/main/java/com/github/Kalcoder/BukkitUtils/errors/ConfigurationNotFoundException.java
+public class ConfigurationNotFoundException extends Exception{
+=======
+public class MissingConfigurationException extends Error{
+>>>>>>> Stashed changes:src/main/java/com/github/Kalcoder/BukkitUtils/errors/MissingConfigurationException.java
   
   public MissingConfigurationException() {
     super();
