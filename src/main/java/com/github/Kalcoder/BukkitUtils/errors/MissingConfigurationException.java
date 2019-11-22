@@ -4,9 +4,9 @@ package com.github.Kalcoder.BukkitUtils.errors;
  *
  * @since 1.0
  */
-public class ConfigurationNotFoundException extends Exception{
+public class MissingConfigurationException extends Exception{
   
-  public ConfigurationNotFoundException() {
+  public MissingConfigurationException() {
     super();
   }
   
@@ -15,7 +15,7 @@ public class ConfigurationNotFoundException extends Exception{
    *
    * @since 1.0
    */
-  public ConfigurationNotFoundException(String configName) {
+  public MissingConfigurationException(String configName) {
     super("The configuration \"" + configName + "\" was not found!");
   }
   
@@ -25,7 +25,7 @@ public class ConfigurationNotFoundException extends Exception{
    *
    * @since 1.0
    */
-  public ConfigurationNotFoundException(String configName, Throwable cause) {
+  public MissingConfigurationException(String configName, Throwable cause) {
     super("The configuration \"" + configName + "\" was not found!", cause);
   }
   
@@ -34,11 +34,11 @@ public class ConfigurationNotFoundException extends Exception{
    *
    * @since 1.0
    */
-  public ConfigurationNotFoundException(Throwable cause) {
+  public MissingConfigurationException(Throwable cause) {
     super(cause);
   }
   
-  protected ConfigurationNotFoundException(String configName, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+  protected MissingConfigurationException(String configName, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
     super("The configuration \"" + configName + "\" was not found!", cause, enableSuppression, writableStackTrace);
   }
 }
