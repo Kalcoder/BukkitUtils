@@ -23,7 +23,7 @@ targetCompatibility = 1.8
 
 group = 'com.github.Kalcoder'
 archivesBaseName = "BukkitUtils"
-version = '1.1.1'
+version = '1.1-nightly'
 
 dokka {
     outputFormat = 'javadoc'
