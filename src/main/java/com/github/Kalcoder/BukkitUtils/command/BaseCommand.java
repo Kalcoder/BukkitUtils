@@ -1,40 +1,51 @@
 package com.github.Kalcoder.BukkitUtils.command;
 
-import org.bukkit.command.*;
+import org.bukkit.Bukkit;
+import org.bukkit.command.BlockCommandSender;
+import org.bukkit.command.CommandMap;
+import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
+import org.bukkit.command.defaults.BukkitCommand;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
+
+import java.lang.reflect.Field;
 
 /** This is the base command class used for creating commands.
  *
  * @since 1.0
  */
-public abstract class BaseCommand implements CommandExecutor {
-  
-  /** The plugin that is using BukkitUtils
-   * @since 1.0
-   */
-  private final JavaPlugin plugin;
+public abstract class BaseCommand extends BukkitCommand {
   
   /** Constructor
-   * @param plugin The plugin that is using BukkitUtils
+   * @param name The name of the command
+   * @param namespace The prefix used when there are command conflicts
+   *
    * @since 1.0
    */
-  public BaseCommand(JavaPlugin plugin, String name) {
-    this.plugin = plugin;
-    plugin.getCommand(name).setExecutor(this);
+  public BaseCommand(String name, String namespace) {
+    super(name);
+  
+    try {
+      final Field bukkitCommandMap = Bukkit.getServer().getClass().getDeclaredField("commandMap");
+    
+      bukkitCommandMap.setAccessible(true);
+      CommandMap commandMap = (CommandMap) bukkitCommandMap.get(Bukkit.getServer());
+    
+      commandMap.register(namespace, this);
+    } catch(Exception e) {
+      e.printStackTrace();
+    }
   }
   
   /** Function called when the command registered under this command's name is executed
-   *
    * @param sender The sender of the command
-   * @param command The command
    * @param label The alias of the command used
    * @param args The arguments provided when the command was executed
    *
    * @since 1.0
    */
   @Override
-  public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+  public boolean execute(CommandSender sender, String label, String[] args) {
     if (this instanceof IPlayerCommand && !(sender instanceof Player)) {
       sender.sendMessage("Error: You must be a player to use this command!");
       return true;
